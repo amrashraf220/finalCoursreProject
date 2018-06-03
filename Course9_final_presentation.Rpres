@@ -1,0 +1,42 @@
+final_presentation
+========================================================
+author: Amr Ashraf
+date: 3/6/2018
+autosize: true
+
+Introduction
+========================================================
+
+This presentation is made to show the work done in the the shiny app , which is the final project of data science specialization ,
+nth course : developing data products 
+here we can find the app:
+https://depo-egy.shinyapps.io/myApp/
+
+here we can find the source code of ui.R and server.R on github repo.:
+https://github.com/depo-egy/developing-data-products-final-project
+
+The Data
+========================================================
+
+The data set used is the cars data set , which is famously and widely used in R to learn and try some calculations and design some models.<br>
+As mentioned before I chose the linear prediction model to dedict the required distance.
+
+Usage
+========================================================
+Here we have a page consists of two parts.<br>
+the left part you have to slide the slider horizontally to increase or decrease the speed of the car. 
+<br> the right part you will see the calculations based on the model I made (linear model) to predict the distance(in feet) required to stop the car.<br>
+Also the app I made will calculate the distance / speed in k/h.
+
+
+The Model
+========================================================
+Here is the r code of the linear model used in this app.
+
+```{r}
+car <- lm(dist ~ speed , data = cars)
+car
+```
+The result is given by multiplying the speed in the slider times the speed coefficient and adding the intercept coefficient.
+
+Finally the app will calculates the speed in k/h
